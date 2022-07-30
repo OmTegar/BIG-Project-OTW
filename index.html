@@ -1,0 +1,171 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>True Alien Cods</title>
+    <!----===== Boxicons CSS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="img/Tconf_logo.png" alt="" />
+          </span>
+
+          <div class="text logo-text">
+            <span class="name">TAC</span>
+            <span class="profession">True Alien Cods</span>
+          </div>
+        </div>
+
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <i class="bx bx-search icon"></i>
+            <input type="text" placeholder="Search..." />
+          </li>
+
+          <ul class="menu-links">
+            <li class="nav-link user">
+              <a href="#" class="profile">
+                <i class="bx bx-user icon"></i>
+                <span class="text nav-text">Profile</span>
+              </a>
+            </li>
+
+            
+          </ul>
+        </div>
+
+        <div class="bottom-content">
+
+          <li class="mode">
+            <div class="sun-moon">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">Dark mode</span>
+
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <section class="home">
+      <div class="home-container">
+        <div class="image-box">
+          <div class="image">
+            <img class="img1" src="img/back.png" alt="" />
+          </div>
+          <div class="image">
+            <img class="img2" src="img/Banner.png" alt="" />
+          </div>
+          <div class="image">
+            <img class="img3" src="img/Banner.png" alt="" />
+          </div>
+          <div class="image">
+            <img class="img4" src="img/back.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="side_bar">
+        <h2>Prefiew project</h2>
+      </div>
+
+      <div class="right-content close">
+        
+          <div class="row">
+            <span class="image">
+              <img src="img/Tconf_logo.png" alt="" />
+            </span>
+
+
+            <div class="text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                nulla a quaerat odio reprehenderit incidunt ducimus velit totam
+                voluptatum sapiente! Sapiente cumque obcaecati, repellendus
+                explicabo architecto ex accusantium asperiores quaerat!
+              </p>
+            </div>
+
+            <div class="icon">
+              <li>
+                <a><img src="img/facebook.png"></a>
+              </li>
+              <li>
+                <a><img src="img/facebook.png"></a>
+              </li>
+            </div>
+
+            <div class="bottom-icon">
+              <li class="log_out">
+                <a href="#" class="out">
+                  <i class="bx bx-log-out icon"></i>
+                  <span class="text">Logout</span>
+                </a>
+              </li>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+    <script>
+      const body = document.querySelector("body"),
+        sidebar = body.querySelector("nav"),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text"),
+        home = body.querySelector(".home"),
+        profile = body.querySelector(".profile"),
+        contentProfile = body.querySelector(".right-content"),
+        out = body.querySelector(".out");
+
+      toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+
+      profile.addEventListener("click", () => {
+        contentProfile.classList.remove("close");
+      });
+
+      out.addEventListener("click", () => {
+        contentProfile.classList.toggle("close");
+      });
+
+      searchBtn.addEventListener("click", () => {
+        sidebar.classList.remove("close");
+      });
+
+      modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          modeText.innerText = "Light mode";
+        } else {
+          modeText.innerText = "Dark mode";
+        }
+      });
+    </script>
+  </body>
+</html>

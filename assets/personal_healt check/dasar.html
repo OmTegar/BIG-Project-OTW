@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dasar</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <h2>PERSONAL HEALTH CHECK SERVICE</h2>
+                <h4>name service 1</h4>
+                <p>deskripsi</p>
+            </div>
+    
+            <div class="col-2">
+                <div class="tanya">
+                    <h4 id="tanya1">tinggi</h4>
+                </div>
+                <span class="jawab">
+                    <input id="jawab1" type="text" placeholder="jawab...">
+                </span>
+
+                <div class="tanya">
+                    <h4 id="tanya2">berat</h4>
+                </div>
+                <span class="jawab">
+                    <input id="jawab2" type="text" placeholder="jawab...">
+                </span>
+
+                <button onclick="keseimbangan()">input</button>
+            </div>
+        </div>
+
+        <div class="output">
+            <h2 id="hasil_check"></h2>
+            <h3 id="hasil"> </h3>
+            <h3 id="hasil2"> </h3>
+        </div>
+
+        <div id="back_home">
+            <button><a href="index.html">back</a></button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function keseimbangan(){
+            const jawab1 =parseInt(document.getElementById("jawab1").value);
+            const jawab2 =parseInt(document.getElementById("jawab2").value);
+
+            jawab_1 = jawab1 / 100 ;
+            let perhitungan= jawab_1*jawab_1 ;
+            let perhitungan2= jawab2 / perhitungan ;
+            let total;
+            if(perhitungan2>0){
+                if (perhitungan2 <=16){
+                    total ="anda sangat kurus"; 
+                } else if (perhitungan2 <=18.5){
+                    total ="anda kurus";
+                } else if (perhitungan2 <=25){
+                    total ="anda ideal"; 
+                } else if (perhitungan2 <=30){
+                    total ="anda sedikit gendut";
+                } else {
+                    total ="anda sangat gendut";
+                }
+            } else {
+                total ="inpyt jawaban yang benar";
+            }
+
+            document.getElementById("hasil_check").innerHTML= "HASIL CHECK ANDA : ";
+            document.getElementById("hasil").innerHTML= "masa tubuh anda : " + perhitungan2;
+            document.getElementById("hasil2").innerHTML= total;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #2C2F48;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 60px;
+    background-color:#2C2F48 ;
+}
+
+.logo img{
+    height: 100%;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    justify-items: center;
+}
+
+/* baru */
+#navigation{
+    position: fixed;
+    left: 30px;
+    bottom: 20px;
+    height: auto;
+    z-index: 100;
+}
+#navigation .nav-icon{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+#navigation .nav-icon{
+    color: white;
+    width: 80%;
+}
+
+#nav-content{
+    border-right: 1px solid black;
+    position: fixed;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    max-width: 90vh;
+    z-index: 100;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: translateX(-105%);
+    transition: 0.3s all;
+    background: rgba(44, 47, 72, 0.9);
+}
+#nav-content.show {
+    transform: translateX(0);
+    box-shadow: -6px 0px 29px 7px #000000a3;
+    background: rgba(44, 47, 72, 0.9);
+}
+#nav-content .section-heading{
+    text-align: left;
+}
+#nav-content .section-heading::before{
+    -webkit-text-stroke: 1.5px #afadad25;
+    text-align: left;
+}
+#nav-content .wrapper{
+    width: 70%;
+    position: relative;
+}
+#nav-content ul{
+    list-style: none;
+    text-align: left;
+}
+#nav-content ul li{
+    margin-bottom: 2rem;
+}
+#nav-content ul li a{
+    display: inline-block;
+    color: white;
+    width: 100%;
+    font-size:2.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+#nav-content ul li a::after{
+    content: attr(data-text);
+    pointer-events: none;
+    position: absolute;
+    right: -150px;
+    bottom: 30%;
+    width: 100%;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #afadad25;
+    opacity: 0; 
+    z-index: -1;
+    text-align: center;
+    transform: rotate(90deg) scale(3);
+    transition: 0.3s ease;
+    transition-property: 'opacity, transform';
+}
+#nav-content ul li a:hover::after{
+    opacity: 1;
+    transform: scale(3) translateY(10px) rotate(90deg);
+    padding-top: 20px;
+}
+#nav-content .close-btn{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease 
+}
+#nav-content .close-btn svg{
+    width: 80%;
+}
+#nav-content .close-btn:hover{
+    background-color: crimson;
+}
+
+/* baru end*/
+
+.nav_judul h3{
+    padding: 5px;
+    color: white;
+}
+
+nav ul{
+    height: 100%;
+    text-decoration: none;
+}
+
+.tengah{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.tengah .tengah_atas{
+    border-right: 1px solid black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color:#2C2F48;
+}
+
+.tengah .content{
+    border-right: 1px solid black;
+    padding: 30px;
+    display:flex;
+    flex-direction:column;
+    /* justify-content: center; */
+    text-align: center;
+    align-items: center;
+    background-color: #1D203E;
+}
+
+
+.tengah .content .gambar{
+    display: flex;
+    justify-content: center;
+}
+
+.tengah .content img{
+    display: flex;
+    justify-content: center;
+    border-radius:100px;
+    padding:40px;
+    
+}
+
+.footer{
+     border-right: 1px solid black;
+    /*padding: 10px; */
+
+    line-height: 150px;
+    /* background-color:linier-gradient  (to top #2C2F48); */
+
+    background-color: #1D203E;
+    background-image: linear-gradient(#1D203E , #2C2F48 );
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 10;
+}
+
+.kanan{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #2C2F48;
+    width: 50vh;
+    height: 100vh;
+    /* border-left:1px solid black ; */
+}
+
+.kanan .about_atas ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-evenly;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding:5px 5px 0 5px;
+    border-bottom: 1px solid black;
+}
+
+.kanan .about_atas ul li img{
+    height:60px;
+    width: 60px;
+}
+
+.isi{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background: #2C2F48;
+}
+
+#search{
+    width: 70vh;
+    height: 5vh;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(180deg, rgba(46, 51, 90, 0.3) 0%, rgba(28, 27, 51, 0.3) 100%);
+}
